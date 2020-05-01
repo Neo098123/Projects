@@ -180,7 +180,7 @@ int main(){
         /* Vit�ria!!! */
 
         if(vitoria == 1)
-            printf("\nVoce venceu!");
+            printf("\nVoce venceu!\n");
 
         /* Se o jogador n�o tiver vencido, far� um novo chute */
 
