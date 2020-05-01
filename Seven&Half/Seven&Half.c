@@ -9,6 +9,23 @@
 
 
 #include <stdio.h>
+#include <time.h>
+
+/* Função de delay */
+
+void delay(int number_of_seconds) 
+{ 
+    // Converting time into milli_seconds 
+    int milli_seconds = 1000 * number_of_seconds; 
+  
+    // Storing start time 
+    clock_t start_time = clock(); 
+  
+    // looping till required time is not achieved 
+    while (clock() < start_time + milli_seconds);
+
+} 
+
 
 /* Definindo a fun��o raiz c�bica: */
 
@@ -51,8 +68,10 @@ double novaCaixa(double c){
 /* Programa principal: */
 
 int main(){
-    int seed, carta, contadora, contadorb, asteriscos, h, i;
-    double caixa, pontosa, pontosb, teto, derrotas;
+    int seed, carta, contadora, contadorb, vitoria, h, i;
+    double caixa, pontosa, pontosb, aposta, ganho, dinheiro;
+    char hit, end;
+    int stop = 0;
 
     /* A vari�vel seed representa a semente utilizada para se rodar o progragama; contadora e contadorb
     s�o respectivamente o n�mero de cartas compradas pelo apostador e pela banca; pontosa e pontosb s�o
@@ -63,48 +82,79 @@ int main(){
 
     printf("Entre com uma semente para o programa:");
     scanf("%d", &seed);
+    printf("\n");
+
     caixa = seed;
     while (seed != 0){
         seed = seed/10;
         caixa = caixa/10;
     }
+         dinheiro = 200;
 
-    teto = 0.5;
+         while(dinheiro > 0){
+            
+            printf("Saldo: %lf \n", dinheiro);
+            printf("Entre com um valor de aposta:");
+            scanf("%lf", &aposta);
+            printf("\nSeu Turno:\n");
 
-    /* Iniciando o la�o para cada valor de teto: */
 
-    while (teto <= 7.5){
-        derrotas = 0;
-
-        /* Iniciando o la�o das 10000 partidas: */
-
-        for(i = 0; i < 10000; i++){
-
+            while(aposta > dinheiro){
+                printf("Valor de aposta inválido.\n");
+                printf("Entre com um valor de aposta:");
+                scanf("%lf", &aposta);
+                printf("\n");
+            }
             /* Zerando as pontua��es e marcadores: */
 
+            vitoria = 0;
             contadora = 0;
             contadorb = 0;
             pontosa = 0;
             pontosb = 0;
+            ganho = -(aposta);
 
             /* vez do apostador: */
 
-            while (pontosa < teto){
+            /* Compra de cartas (apostador) : */
 
-                /* Compra de cartas (apostador) : */
 
-                carta = chao(caixa*10 + 1);
-                if (carta > 7)
-                    pontosa = pontosa + 0.5;
-                else
-                    pontosa = pontosa + carta;
-                caixa = novaCaixa(caixa);
-                contadora++;
+            hit = 'a';
+            carta = chao(caixa*10 + 1);
+            if (carta > 7)
+            pontosa = pontosa + 0.5;
+            else
+                pontosa = pontosa + carta;
+            caixa = novaCaixa(caixa);
+            contadora++;
+            printf("pontos: %2f \n", pontosa);
+
+            while(hit != 's' && pontosa <= 7.5){
+                printf("Mais uma carta? h (hit) / s (stop) :");
+                scanf(" %c", &hit);
+                if(hit == 'h'){
+                    carta = chao(caixa*10 + 1);
+                    if (carta > 7)
+                        pontosa = pontosa + 0.5;
+                    else
+                        pontosa = pontosa + carta;
+                    caixa = novaCaixa(caixa);
+                    contadora++;
+                    printf("total: %2f \n", pontosa);
+                }
             }
 
+            if(pontosa > 7.5){
+                delay(700);
+                printf("Estourou!! \n");
+                delay(700);
+            }
+            
             /* Vez da banca */
 
             if (pontosa <= 7.5){
+                printf("\nTurno da banca:\n");
+
                 while (pontosb < pontosa){
 
                     /* Compra de cartas: */
@@ -116,6 +166,9 @@ int main(){
                         pontosb = pontosb + carta;
                     caixa = novaCaixa(caixa);
                     contadorb++;
+                    
+                    printf("pontos (banca): %2f\n", pontosb);
+                    delay(700);
 
                 }
 
@@ -123,8 +176,11 @@ int main(){
 
                 /* "Estourou":*/
 
-                if (pontosb > 7.5)
-                    derrotas++;
+                if (pontosb > 7.5){
+                    ganho = aposta;
+                    printf("Voce Venceu!");
+                    vitoria = 1;
+                }
 
                 /* Fez tantos pontos quanto o apostador, mas comprou mais cartas: */
 
@@ -140,36 +196,35 @@ int main(){
                             pontosb = pontosb + carta;
                         caixa = novaCaixa(caixa);
                         contadorb++;
+                        printf("pontos (banca): %2f\n", pontosb);
+                        delay(700);
 
                         /* "Estourou": */
-
                         if ( pontosb > 7.5){
-                            derrotas++;
+                            ganho = aposta;
+                            printf("Voce Venceu!");
+                            vitoria = 1;
                         }
-
+                    }  
                     /* N�o existe possibilidade de vit�ria: */
 
-                    else if (pontosb == 7.5)
-                        derrotas++;
+                    else if (pontosb == 7.5){
+                        ganho = aposta;
+                        printf("Voce Venceu!");
+                        vitoria = 1;
+
                     }
                 }
             }
+            dinheiro += ganho;
+            if(vitoria==0){
+                printf("Voce Perdeu.");
+            }
+            printf("\n");
+
         }
-
-        /* Fim das 10000 partidas */
-
-        printf("%.1lf %.0lf ", teto, derrotas);
-        asteriscos = chao(100*(derrotas/10000) + 0.5);
-        for (h = 0; h < asteriscos; h++){
-            printf("*");
-        }
-        printf("\n");
-
-        /* Pr�ximo teto: */
-
-        teto = teto + 0.5;
-    }
-    /* Fim da simula��o */
+    printf("Não há mais saldo disponível.\n");
+    delay(2000);
     return 0;
 }
 
