@@ -32,7 +32,7 @@ int main(){
         printf("Digite o seu palpite:");
         scanf("%d",&tentativa);
         if (tentativa == senha){
-            printf("4 pretos \n");
+            printf("%d pretos \n", &digitos);
             printf("Parabens! Voce descobriu a senha em %d tentativas.",i);
             return 0; /*fim do jogo (objetivo atingido)*/
         }
