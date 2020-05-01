@@ -1,0 +1,273 @@
+# depslib dependency file v1.0
+1573005859 source:c:\users\wilfu\downloads\ep2\competicao.cpp
+	"Competicao.h"
+
+1573008777 c:\users\wilfu\downloads\ep2\competicao.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+
+1572907338 c:\users\wilfu\downloads\ep2\equipe.h
+	<iostream>
+
+1572910949 c:\users\wilfu\downloads\ep2\modalidade.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"TabelaComOrdem.h"
+
+1573047047 c:\users\wilfu\downloads\ep2\tabelacomordem.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573005859 c:\users\wilfu\downloads\ep2\tabela.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+
+1572976289 source:c:\users\wilfu\downloads\ep2\competicaosimples.cpp
+	"CompeticaoSimples.h"
+
+1573047047 c:\users\wilfu\downloads\ep2\competicaosimples.h
+	"Competicao.h"
+
+1568760079 source:c:\users\wilfu\downloads\ep2\equipe.cpp
+	"Equipe.h"
+
+1573007725 source:c:\users\wilfu\downloads\ep2\main.cpp
+	<iostream>
+	"Competicao.h"
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+	"CompeticaoSimples.h"
+	"CompeticaoMultimodalidades.h"
+	"TabelaComOrdem.h"
+	"TabelaComPontos.h"
+	"PersistenciaDeCompeticao.h"
+
+1573008013 source:c:\users\wilfu\downloads\ep2\modalidade.cpp
+	"Modalidade.h"
+
+1573005859 source:c:\users\wilfu\downloads\ep2\tabela.cpp
+	"Tabela.h"
+
+1573005931 source:c:\users\wilfu\downloads\ep2\tabelacomordem.cpp
+	"TabelaComOrdem.h"
+
+1572967657 source:c:\users\wilfu\downloads\ep2\tabelacompontos.cpp
+	"TabelaComPontos.h"
+
+1573047047 c:\users\wilfu\downloads\ep2\tabelacompontos.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573047047 source:c:\users\wilfu\downloads\ep2\competicaomultimodalidades.cpp
+	"CompeticaoMultimodalidades.h"
+
+1573047047 c:\users\wilfu\downloads\ep2\competicaomultimodalidades.h
+	"Competicao.h"
+	"TabelaComPontos.h"
+	"TabelaComOrdem.h"
+	<list>
+	<vector>
+	<algorithm>
+
+1573047047 c:\users\wilfu\downloads\ep2\persistenciadecompeticao.h
+	"Competicao.h"
+	"CompeticaoMultimodalidades.h"
+	"CompeticaoSimples.h"
+	<fstream>
+
+1573006973 source:c:\users\wilfu\downloads\ep2\persistenciadecompeticao.cpp
+	"PersistenciaDeCompeticao.h"
+
+1573054694 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicao.cpp
+	"Competicao.h"
+
+1573054694 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicao.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+
+1573054698 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\equipe.h
+	<iostream>
+
+1573054700 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\modalidade.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"TabelaComOrdem.h"
+
+1573054698 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabelacomordem.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573054700 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabela.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+
+1573077254 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicaomultimodalidades.cpp
+	"CompeticaoMultimodalidades.h"
+
+1573054696 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicaomultimodalidades.h
+	"Competicao.h"
+	"TabelaComPontos.h"
+	"TabelaComOrdem.h"
+	<list>
+	<vector>
+	<algorithm>
+
+1573054700 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabelacompontos.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573077186 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicaosimples.cpp
+	"CompeticaoSimples.h"
+
+1573054694 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\competicaosimples.h
+	"Competicao.h"
+
+1573054694 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\equipe.cpp
+	"Equipe.h"
+
+1573054700 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\modalidade.cpp
+	"Modalidade.h"
+
+1573077375 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\persistenciadecompeticao.cpp
+	"PersistenciaDeCompeticao.h"
+
+1573054700 c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\persistenciadecompeticao.h
+	"Competicao.h"
+	"CompeticaoMultimodalidades.h"
+	"CompeticaoSimples.h"
+	<fstream>
+
+1573054700 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabela.cpp
+	"Tabela.h"
+
+1573054700 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabelacomordem.cpp
+	"TabelaComOrdem.h"
+
+1573054700 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\tabelacompontos.cpp
+	"TabelaComPontos.h"
+
+1573076187 source:c:\users\leonardo komura\documents\programação\pcs\ep2\ep2\main.cpp
+	<iostream>
+	"Competicao.h"
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+	"CompeticaoSimples.h"
+	"CompeticaoMultimodalidades.h"
+	"TabelaComOrdem.h"
+	"TabelaComPontos.h"
+	"PersistenciaDeCompeticao.h"
+
+1573136318 source:c:\users\wilfu\downloads\ep2\ep2\ep2\competicao.cpp
+	"Competicao.h"
+
+1573054694 c:\users\wilfu\downloads\ep2\ep2\ep2\competicao.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+
+1573054698 c:\users\wilfu\downloads\ep2\ep2\ep2\equipe.h
+	<iostream>
+
+1573054700 c:\users\wilfu\downloads\ep2\ep2\ep2\modalidade.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+	"TabelaComOrdem.h"
+
+1573054698 c:\users\wilfu\downloads\ep2\ep2\ep2\tabelacomordem.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573328943 c:\users\wilfu\downloads\ep2\ep2\ep2\tabela.h
+	<iostream>
+	<stdexcept>
+	"Equipe.h"
+
+1573327933 source:c:\users\wilfu\downloads\ep2\ep2\ep2\competicaomultimodalidades.cpp
+	"CompeticaoMultimodalidades.h"
+
+1573054696 c:\users\wilfu\downloads\ep2\ep2\ep2\competicaomultimodalidades.h
+	"Competicao.h"
+	"TabelaComPontos.h"
+	"TabelaComOrdem.h"
+	<list>
+	<vector>
+	<algorithm>
+
+1573329007 c:\users\wilfu\downloads\ep2\ep2\ep2\tabelacompontos.h
+	"Tabela.h"
+	<iostream>
+	<stdexcept>
+
+1573314204 source:c:\users\wilfu\downloads\ep2\ep2\ep2\competicaosimples.cpp
+	"CompeticaoSimples.h"
+
+1573054694 c:\users\wilfu\downloads\ep2\ep2\ep2\competicaosimples.h
+	"Competicao.h"
+
+1573054694 source:c:\users\wilfu\downloads\ep2\ep2\ep2\equipe.cpp
+	"Equipe.h"
+
+1573162616 source:c:\users\wilfu\downloads\ep2\ep2\ep2\modalidade.cpp
+	"Modalidade.h"
+
+1573136419 source:c:\users\wilfu\downloads\ep2\ep2\ep2\tabela.cpp
+	"Tabela.h"
+
+1573329273 source:c:\users\wilfu\downloads\ep2\ep2\ep2\tabelacomordem.cpp
+	"TabelaComOrdem.h"
+
+1573331312 source:c:\users\wilfu\downloads\ep2\ep2\ep2\tabelacompontos.cpp
+	"TabelaComPontos.h"
+
+1573147153 source:c:\users\wilfu\downloads\ep2\ep2\ep2\main.cpp
+	<iostream>
+	"Competicao.h"
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+	"CompeticaoSimples.h"
+	"CompeticaoMultimodalidades.h"
+	"TabelaComOrdem.h"
+	"TabelaComPontos.h"
+	"PersistenciaDeCompeticao.h"
+
+1573318618 c:\users\wilfu\downloads\ep2\ep2\ep2\persistenciadecompeticao.h
+	"Competicao.h"
+	"CompeticaoMultimodalidades.h"
+	"CompeticaoSimples.h"
+	"Competicao.h"
+	"Equipe.h"
+	"Modalidade.h"
+	"Tabela.h"
+	"TabelaComOrdem.h"
+	"TabelaComPontos.h"
+	<stdexcept>
+	<vector>
+	<list>
+	<algorithm>
+	<stdio.h>
+	<fstream>
+
+1573322317 source:c:\users\wilfu\downloads\ep2\ep2\ep2\persistenciadecompeticao.cpp
+	"PersistenciaDeCompeticao.h"
+
