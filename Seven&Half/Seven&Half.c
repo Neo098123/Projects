@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <conio.h>
 
 /* Função de delay */
 
@@ -96,16 +97,16 @@ int main(){
             printf("Saldo: %lf \n", dinheiro);
             printf("Entre com um valor de aposta:");
             scanf("%lf", &aposta);
-            printf("\nSeu Turno:\n");
 
 
             while(aposta > dinheiro){
-                printf("Valor de aposta inválido.\n");
+                printf("Valor de aposta invalido.\n");
                 printf("Entre com um valor de aposta:");
                 scanf("%lf", &aposta);
                 printf("\n");
             }
             /* Zerando as pontua��es e marcadores: */
+            printf("\nSeu Turno:\n");
 
             vitoria = 0;
             contadora = 0;
@@ -145,9 +146,9 @@ int main(){
             }
 
             if(pontosa > 7.5){
-                delay(700);
-                printf("Estourou!! \n");
-                delay(700);
+                delay(1);
+                printf("\nEstourou!! \n");
+                delay(1);
             }
             
             /* Vez da banca */
@@ -168,9 +169,9 @@ int main(){
                     contadorb++;
                     
                     printf("pontos (banca): %2f\n", pontosb);
-                    delay(700);
-
+                    delay(1);
                 }
+                printf("\n");
 
                 /* Casos de derrota da banca: */
 
@@ -197,7 +198,7 @@ int main(){
                         caixa = novaCaixa(caixa);
                         contadorb++;
                         printf("pontos (banca): %2f\n", pontosb);
-                        delay(700);
+                        delay(1);
 
                         /* "Estourou": */
                         if ( pontosb > 7.5){
@@ -223,8 +224,9 @@ int main(){
             printf("\n");
 
         }
-    printf("Não há mais saldo disponível.\n");
-    delay(2000);
+    printf("\nNao ha mais saldo disponivel.\n");
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
     return 0;
 }
 
