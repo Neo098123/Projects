@@ -40,6 +40,8 @@ int main(){
         if (tentativa == senha){
             printf("%d pretos \n", &digitos);
             printf("Parabens! Voce descobriu a senha em %d tentativas.",i);
+            printf("\n\nPressione qualquer tecla para sair.");
+            getch();
             return 0; /*fim do jogo (objetivo atingido)*/
         }
         else{
@@ -89,6 +91,7 @@ int main(){
         }
     }
     printf("Sinto muito, mas nenhum dos %d palpites acertaram a senha %d!",palpites,senha);
+    printf("\n\nPressione qualquer tecla para sair.");
     getch();
     return 0; /*fim do jogo (objetivo fracassado)*/
 }
